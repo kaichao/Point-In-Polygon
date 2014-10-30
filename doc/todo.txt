@@ -1,0 +1,53 @@
+
+1. 论文撰写总体思路？（ppt）
+
+2. 测试数据准备
+	美国twitter数据
+	基础空间数据（中国省级/中国县级）（美国州级/美国郡级）
+	测试点数据生产
+
+3. 软件功能完善及系统优化
+	计算密集型的hadoop地学应用的调优
+	如何使得CPU利用率升高？
+	jvm复用？
+	cnic方案/esri方案的调优方案的差别？
+	测试结果的优化
+	
+	分析准确度数据，改进单机算法
+
+4. 测试用例设计
+	精度测试：模拟数据
+		esri vs cnic(不同解析度)
+
+	性能测试：模拟数据
+		esri vs cnic vs postgis vs postgis+index
+
+	twitter数据案例
+		?
+
+5. 测试结果分析
+    用openlayers/geoserver对结果可视化；
+    
+    
+bugs:
+	ppd = 1, 中国数据预处理出错
+
+
+
+[ambari-1.x]
+name=Ambari 1.x
+baseurl=http://public-repo-1.hortonworks.com/ambari/centos6/1.x/GA
+gpgcheck=1
+gpgkey=http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled=1
+priority=1
+
+[Updates-ambari-1.6.1]
+name=ambari-1.6.1 - Updates
+baseurl=http://public-repo-1.hortonworks.com/ambari/centos6/1.x/updates/1.6.1
+gpgcheck=1
+gpgkey=http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled=1
+priority=1
+
+	
